@@ -1,43 +1,44 @@
 package org.subbotin.myspring.domain;
 
-import jakarta.persistence.Id;
 import jakarta.persistence.Column;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.MappedSuperclass;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.MappedSuperclass;
 import jakarta.validation.constraints.NotBlank;
 
 @MappedSuperclass
 public abstract class Literature {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @NotBlank
-    @Column(nullable = false)
+    @Column(name = "genre", nullable = false)
     private String genre;
 
     @Min(0)
     @Max(18)
-    @Column(nullable = false)
+    @Column(name = "agelimit", nullable = false)
     private int ageLimit;
 
     @NotBlank
-    @Column(nullable = false)
+    @Column(name = "name", nullable = false)
     private String name;
 
     @NotBlank
-    @Column(nullable = false)
+    @Column(name = "description", nullable = false)
     private String description;
 
     @Min(1)
-    @Column(nullable = false)
+    @Column(name = "releasedate", nullable = false)
     private int releaseYear;
 
     @NotBlank
-    @Column(nullable = false)
+    @Column(name = "linkbook", nullable = false)
     private String linkBook;
 
     protected Literature() {

@@ -11,7 +11,7 @@ import jakarta.validation.constraints.NotBlank;
 public class Encyclopedia extends Literature {
 
     @NotBlank
-    @Column(nullable = false)
+    @Column(name = "edition", nullable = false)
     private String edition;
 
     protected Encyclopedia() {

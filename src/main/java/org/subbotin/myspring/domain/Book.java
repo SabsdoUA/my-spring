@@ -1,8 +1,8 @@
 package org.subbotin.myspring.domain;
 
-import jakarta.persistence.Table;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 
@@ -11,17 +11,18 @@ import jakarta.validation.constraints.NotBlank;
 public class Book extends Literature {
 
     @NotBlank
-    @Column(nullable = false)
+    @Column(name = "author", nullable = false)
     private String author;
 
     @Min(1)
-    @Column(nullable = false)
+    @Column(name = "pages", nullable = false)
     private int pages;
 
     protected Book() {
     }
 
-    public Book(Integer id, String genre, int ageLimit, String name, String description, int releaseYear, String linkBook, String author, int pages) {
+    public Book(Integer id, String genre, int ageLimit, String name, String description,
+                int releaseYear, String linkBook, String author, int pages) {
         super(id, genre, ageLimit, name, description, releaseYear, linkBook);
         this.author = author;
         this.pages = pages;

@@ -11,11 +11,11 @@ import jakarta.validation.constraints.NotBlank;
 public class Manga extends Literature {
 
     @NotBlank
-    @Column(nullable = false)
+    @Column(name = "illustrator", nullable = false)
     private String illustrator;
 
     @Min(1)
-    @Column(nullable = false)
+    @Column(name = "volumes", nullable = false)
     private int volumes;
 
     protected Manga() {
