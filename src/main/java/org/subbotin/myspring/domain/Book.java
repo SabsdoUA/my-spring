@@ -21,7 +21,7 @@ public class Book extends Literature {
     protected Book() {
     }
 
-    public Book(Long id, String genre, int ageLimit, String name, String description, int releaseYear, String linkBook, String author, int pages) {
+    public Book(Integer id, String genre, int ageLimit, String name, String description, int releaseYear, String linkBook, String author, int pages) {
         super(id, genre, ageLimit, name, description, releaseYear, linkBook);
         this.author = author;
         this.pages = pages;

@@ -13,7 +13,7 @@ public abstract class Literature {
 
     @Id
     @GeneratedValue
-    private Long id;
+    private Integer id;
 
     @NotBlank
     @Column(nullable = false)
@@ -43,7 +43,7 @@ public abstract class Literature {
     protected Literature() {
     }
 
-    public Literature(Long id, String genre, int ageLimit, String name, String description, int releaseYear, String linkBook) {
+    public Literature(Integer id, String genre, int ageLimit, String name, String description, int releaseYear, String linkBook) {
         this.id = id;
         this.genre = genre;
         this.ageLimit = ageLimit;
@@ -53,7 +53,7 @@ public abstract class Literature {
         this.linkBook = linkBook;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 

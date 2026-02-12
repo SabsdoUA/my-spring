@@ -17,7 +17,7 @@ public class Encyclopedia extends Literature {
     protected Encyclopedia() {
     }
 
-    public Encyclopedia(Long id, String genre, int ageLimit, String name, String description, int releaseYear, String linkBook, String edition) {
+    public Encyclopedia(Integer id, String genre, int ageLimit, String name, String description, int releaseYear, String linkBook, String edition) {
         super(id, genre, ageLimit, name, description, releaseYear, linkBook);
         this.edition = edition;
     }

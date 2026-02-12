@@ -21,7 +21,7 @@ public class Manga extends Literature {
     protected Manga() {
     }
 
-    public Manga(Long id, String genre, int ageLimit, String name, String description, int releaseYear, String linkBook, String illustrator, int volumes) {
+    public Manga(Integer id, String genre, int ageLimit, String name, String description, int releaseYear, String linkBook, String illustrator, int volumes) {
         super(id, genre, ageLimit, name, description, releaseYear, linkBook);
         this.illustrator = illustrator;
         this.volumes = volumes;
