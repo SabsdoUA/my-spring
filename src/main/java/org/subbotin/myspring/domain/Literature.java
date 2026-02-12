@@ -33,7 +33,7 @@ public abstract class Literature {
     private String description;
 
     @Min(1)
-    @Column(name = "release_year", nullable = false)
+    @Column(nullable = false)
     private int releaseYear;
 
     @NotBlank
